@@ -26,3 +26,12 @@ function removeElementFromArray(){
   dishes.splice(2, 2, "Roast Chicken");
   return dishes;
 }
+
+function iterateArray(){
+  var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var newNums = [];
+  nums.forEach(function(num) {
+    newNums.push(num + 5);
+  });
+  return newNums;
+}
