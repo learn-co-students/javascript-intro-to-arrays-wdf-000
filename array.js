@@ -2,35 +2,31 @@
 
 function createArray(){
   return ["snickers", "hundred grand", "kitkat", "skittles"];
+
 }
 
-function addElementToArray(){
-  var christmasMovies = ["Home Alone", "Love Actually", "Elf"];
-  christmasMovies.push("A Christmas Story");
-  return christmasMovies;
+function addElementToArray(movieArr){
+  movieArr.push("A Christmas Story");
+  return movieArr;
 }
 
-function accessElementFromArray(){
-  var states = ["New York", "California", "Virginia", "Louisiana", "Nevada"];
-  return states[2];
+function accessElementFromArray(statesArr){
+  return statesArr[2];
 }
 
-function replaceElementInArray(){
-  var names = ["Joe", "Tim", "Stephen", "Sarah", "Stephanie"];
-  names[1] = "Carter";
-  return names[1];
+function replaceElementInArray(namesArr){
+  namesArr[1] = "Carter";
+  return namesArr[1];
 }
 
-function removeElementFromArray(){
-  var dishes = ["Pasta Alfredo", "Grilled Salmon", "Hamburgers", "Black Bean Soup"];
-  dishes.splice(2, 2, "Roast Chicken");
-  return dishes;
+function removeElementFromArray(dishesArr){
+  dishesArr.splice(2, 2, "Roast Chicken");
+  return dishesArr;
 }
 
-function iterateArray(){
-  var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function iterateArray(numArr){
   var newNums = [];
-  nums.forEach(function(num) {
+  numArr.forEach(function(num) {
     newNums.push(num + 5);
   });
   return newNums;
