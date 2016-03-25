@@ -1,7 +1,7 @@
 # JavaScript Arrays
 
 ## Objectives
-+ Explain what an array is and why we wuse it
++ Explain what an array is and why we use it
 + Create an array
 + Add an element to an array
 + Access an element in an array
@@ -16,7 +16,7 @@ You'll be coding along in `array.js`. There are tests to run to make sure you're
 
 ## Creation
 
-JavaScript arrays can contain any types of values and they can be of mixed types. You can create arrays in two different ways, the most common of which is to list values in a pair of square brackets. These are called array literals. 
+JavaScript arrays can contain any types of values and they can be of mixed types, just like in Ruby. You can create arrays in two different ways, the most common of which is to list values in a pair of square brackets. These are called array literals.
 
 Syntax:
 
@@ -36,7 +36,7 @@ var weirdGreeting = [ "he", 110, "w", 0, "r", {"1":"d"} ];
 var empty = [];
 ```
 
-Array constructor is another approach to making a new JavaScript array.
+The Array constructor is another approach to making a new JavaScript array.
 
 ```javascript
 var evenNumbers = new Array();
@@ -57,7 +57,7 @@ superheroines.push("wonder woman");
 
 To add elements to an array at specific indexes, you use the bracket equals notation. This notation will also work for replacing values.
 
-Let's add three elements to our empty `evenNumbers` array. First, decide what index you want your element to have, remember the first element in an array has an index of 0. Then you wrap this desired index in brackets, place the array's variable name directly to the left. Remember to place an equal sign to the right of the closing square bracket, and put the value that you want your element to have after the equal sign.
+Let's add three elements to our empty `evenNumbers` array. First, decide what index you want your element to have (remember the first element in an array has an index of 0). Then you wrap this desired index in brackets, place the array's variable name directly to the left. Remember to place an equal sign to the right of the closing square bracket, and put the value that you want your element to have after the equal sign.
 
 ```javascript
 var evenNumbers = new Array();
@@ -136,7 +136,7 @@ var removedFishes = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 // removedFishes is ['angel', 'clown']
 ```
 
-+ Define a function `removeElementFromArray` that take an array of dishes as a paramet. The function should remove the third and fourth item from the array, and adds "Roast Chicken" to the end, using the `splice` function. The function should return the updated array.
++ Define a function `removeElementFromArray` that take an array of dishes as a parameter. The function should remove the third and fourth item from the array, and adds "Roast Chicken" to the end, using the `splice` function. The function should return the updated array.
 
 ## Iteration
 
@@ -182,9 +182,41 @@ letters.forEach(function(letter, index) {
 + Write a function `iterateArray` that accepts an array of numbers as a parameter. The body should also contain an empty array, stored in the variable `newNums`. You should iterate over the array of numbers, add 5 to each number, and store the larger number in the array `newNums`. The function should return the `newNums` array.
 
 
+## Array Wackiness
+
+It's important to remember that arrays in JavaScript are kind of wonky. You can
+assign properties to them:
+
+```js
+var array = [1, 2, 3];
+
+array.myProperty = "I'm a property!";
+
+```
+
+Which can lead to weird behavior:
+
+```js
+array;
+// [1, 2, 3];
+
+// Where did our property go?
+array.myProperty;
+// "I'm a property!";
+
+array.length;
+// 3 - Would you have expected 3 or 4?
+```
+
+We don't tend to do these kinds of things on purpose, but it's important to be
+aware that they can happen so that you have a good sense of where to look
+if/when strange bugs start to appear.
+
 ## Resources
 
 * [MDN - Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 * [Codecademy - Arrays](http://www.codecademy.com/glossary/javascript)
 
-<a href='https://learn.co/lessons/intro-to-arrays.js' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-arrays.js' title='JavaScript Arrays'>JavaScript Arrays</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-arrays.js'>Intro To Arrays in JS</a> on Learn.co and start learning to code for free.</p>
