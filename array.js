@@ -6,7 +6,6 @@ function createArray(){
 
 function addElementToArray(arr){
   arr.push("A Christmas Story");
-  
   return arr;
 }
 
@@ -20,16 +19,14 @@ function replaceElementInArray(arr){
 }
 
 function removeElementFromArray(arr){
-  arr.splice(2,2);
-  arr.push("Roast Chicken");
-
+  arr.splice(2,2,"Roast Chicken");
   return arr;
 }
 
 function iterateArray(arr){
   var newNums = [];
 
-  arr.forEach(i => newNums.push(i + 5));
+  arr.forEach(function(n){newNums.push(n + 5);});
 
   return newNums;
 }
