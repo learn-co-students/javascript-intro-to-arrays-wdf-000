@@ -23,5 +23,6 @@ function removeElementFromArray(arr) {
 }
 
 function iterateArray(nums) {
-  return nums.map(function(num){ return num + 5 })
+  var nums_2 = nums.map(function(num){ return num + 5 })
+  return nums_2
 }
