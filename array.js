@@ -26,8 +26,8 @@ function removeElementFromArray(array) {
 
 function iterateArray(nums) {
   var newNums = []
-  nums.forEach(function(num, index) {
-    newNums.push(nums[index] + 5);
+  nums.forEach(function(num) {
+    newNums.push(num + 5);
   });
   return newNums;
 }
