@@ -13,7 +13,10 @@ function accessElementFromArray(array){
 }
 
 function replaceElementInArray(array){
-	return array[1] = "Carter";
+	// return array[1] = "Carter";
+	// or:
+	array[1] = "Carter";
+	return array[1];
 }
 
 function removeElementFromArray(array){
@@ -22,7 +25,9 @@ function removeElementFromArray(array){
 }
 
 function iterateArray(array){
-	var newNums = [];
+	// var newNums = [];
+	// or:
+	var newNums = new Array();
 	array.forEach(function(number){
 		newNums.push(number + 5);
 	});
